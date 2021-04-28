@@ -1,0 +1,50 @@
+body {
+    background: #fafafa;
+    font-family: 'Ubuntu', sans-serif;
+}
+.current-coin-price h3 {
+    text-align: center;
+}
+.current-coin-price, .buy-or-sell, .trade-creator-coin-info-buy, .trade-creator-coin-info-sell {
+    background: #ffffff;
+    padding: 30px;
+    margin: auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+}
+
+label {
+    padding: 5px;
+}
+select {
+    outline: none;
+    color: #007bff;
+    word-wrap: normal;
+    text-transform: none;
+}
+
+.button-1 {
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.calculate {
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.info {
+    margin: 10px 40px 0;
+    width: 240px;
+    padding: 10px;
+    border: #3E5C9A solid 1px;
+}

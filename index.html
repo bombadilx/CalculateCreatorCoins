@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css  ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script type="text/javascript" src='index.js'></script>
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "",
+        "url": "index.html"
+    }</script>
+</head>
+<body>
+<div class='info'>
+    <div class='price_wrapper'>$BitClout Price ~$<span id="price"></span></div>
+    <div class='subscribe'><a target="_blank" href="https://bitclout.com/u/bombadi1">Follow me <span class='acc'>@bombadi1</span></a>
+    </div>
+</div>
+<div class="container">
+    <div class="current-coin-price">
+        <h3>Creator Coin Information</h3>
+        <form name="creator-coin-info">
+            <div class="row m-t-50px">
+                <div class="col-lg-4 m-b-25px">
+                    <label for="name-55d7">Сurrent Coin Price</label>
+                    <input class="form-control" autocomplete="off" type="number" id="current_token_price"
+                           placeholder="0"
+                           id="name-55d7">
+                </div>
+                <div class="col-lg-4 m-b-25px">
+                    <label for="name-55d7">Coins In Circulation</label>
+                    <input class="form-control" autocomplete="off" type="number" placeholder="0"
+                           id="coins_in_circulation">
+                </div>
+                <div class="col-lg-4 m-b-25px">
+                    <label for="name-55d7">Creator Founder Reward (%)</label>
+                    <input class="founder-reward form-control" autocomplete="off" type="number" id=""
+                           placeholder="0"
+                           id="" value="0">
+                    <span class="info-founder-reward"></span>
+                </div>
+                <div class="col-lg-4 m-b-25px">
+                    <fieldset disabled>
+                        <label for="disabledTextInput">USD Market Cap</label>
+                        <input type="text" id="disabledTextInput" class="market_cap form-control" placeholder="0"
+                               value="0">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="buy-or-sell">
+        <div class="m-t-50px shadowed background-white" style="padding: 35px 25px 25px 25px">
+            <h3 class="text-center" style="margin-top: 10px">Setup a
+                <select name="trade" id="trade" style="margin: 0px 10px" class="form-select"
+                        aria-label="Default select example">
+                    <option value="buy" id="buy" selected>Buy</option>
+                    <option value="sell" id="sell">Sell</option>
+                </select> Trade.
+            </h3>
+            <div class="m-t-50px text-left">
+                <div class="row">
+                    <div class="col-lg-4 m-b-25px">
+                        <span style="margin-right: 2px; font-size: 16px; opacity: 0">$</span>
+                        <label for="" class="simple-label">Trading Currency</label>
+                        <div class="">
+                            <span style="margin-right: 2px; font-size: 16px; opacity: 0">$</span>
+                            <span value="usd" id="usd" selected="">USD</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 m-b-25px">
+                        <span style="margin-right: 2px; font-size: 16px; opacity: 0">$</span>
+                        <label for="" class="simple-label-usd">usd to capture from buying</label>
+                        <div class="f-s-16px">
+                                <span style="margin-right: 2px; opacity: 1; color: rgb(39, 56, 77);"
+                                      id="usdSymbol">$</span>
+                            <input type="number" class="input-box w-80" name="Coin Price"
+                                   placeholder="0" id="amountTraded">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 m-b-25px calculate">
+                        <label for="" class="simple-label"></label>
+                        <input class="btn btn-primary calculate-button" type="submit" value="Calculate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trade-creator-coin-info-buy">
+        <div class="m-t-50px shadowed background-white">
+            <h3 class="text-center">Post <span style="color: #007bff;">Buy</span> Trade Creator Coin Information.</h3>
+            <h5 class="text-center color-gray" style="margin-top: 10px; font-weight: 400">Your trade's impact on
+                creator's coin price, coin circulation, and market cap.</h5>
+            <div class="row m-t-50px">
+                <div class="col-lg-4 m-b-25px">
+                    <div class="creator-coin-price-change">
+                        <label for="" class="simple-label">Creator Coin Price Change</label>
+                        <div class="f-s-16px">
+                            -
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 m-b-25px">
+                    <div class="creator-coin-circulation-change">
+                        <label for="" class="simple-label">Creator Coin Circulation Change</label>
+                        <div class="f-s-16px">
+                            -
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="market-cap-change-buying">
+                        <label for="" class="simple-label">USD Market Cap Change</label>
+                        <div class="f-s-16px">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trade-creator-coin-info-sell">
+        <div class="m-t-50px shadowed background-white">
+            <h3 class="text-center">Post <span style=" color: #007bff; ">Sell</span> Trade Creator Coin Information.
+            </h3>
+            <h5 class="text-center color-gray" style="margin-top: 10px; font-weight: 400">Your trade's impact on
+                creator's coin price, coin circulation, and market cap.</h5>
+            <div class="row m-t-50px">
+                <div class="col-lg-4 m-b-25px">
+                    <div class="creator-coin-price-change-sell">
+                        <label for="" class="simple-label">Creator Coin Price Change</label>
+                        <div class="f-s-16px">
+                            -
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 m-b-25px">
+                    <div class="creator-coin-circulation-change-sell">
+                        <label for="" class="simple-label">Creator Coin Circulation Change</label>
+                        <div class="f-s-16px">
+                            -
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="market-cap-change-sale">
+                        <label for="" class="simple-label">USD Market Cap Change</label>
+                        <div class="f-s-16px">
+                            -
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
