@@ -83,7 +83,7 @@ window.onload = function () {
                             '                            style="color:#138E5B"> $' + expected_token_price.toFixed(3) + '</span>' +
                             '<div class="f-s-12px m-t-10px">\n' +
                             '                                <i class="fad fa-arrow-alt-down" style="color: #138E5B" aria-hidden="true"></i> <span\n' +
-                            '                                    class="color-gray">$ ' + ((expected_token_price - current_token_price) / current_token_price * 100).toFixed(3) + '%</span>');
+                            '                                    class="color-gray">' + ((expected_token_price - current_token_price) / current_token_price * 100).toFixed(3) + '%</span>');
 
                         $('.creator-coin-circulation-change .f-s-16px').html(coins_supply.toFixed(3) + ' <i class="fad fa-long-arrow-right" aria-hidden="true"></i> <span\n' +
                             '                                style="color:#138E5B"> ' + expected_coins_supply.toFixed(3) + '</span><div class="f-s-12px m-t-10px">\n' +
